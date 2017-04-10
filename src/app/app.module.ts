@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { MainComponent } from './main/main.component';
 import { ResultsComponent } from './results/results.component';
 import { TwitterComponent } from './twitter/twitter.component';
+import { OrgDetailComponent } from './org-detail/org-detail.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TwitterComponent } from './twitter/twitter.component';
     MainComponent,
     ResultsComponent,
     TwitterComponent,
+    OrgDetailComponent,
   ],
   imports: [
     BrowserModule,

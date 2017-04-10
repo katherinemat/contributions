@@ -8,7 +8,7 @@
 <button (click)="getDonations(company.value)">Load donations</button>
 
 <div *ngFor="let donation of donations">
-  {{donation}}
+  <a routerLink="twitter">{{donation}}</a>
 </div>
 <hr>
 
