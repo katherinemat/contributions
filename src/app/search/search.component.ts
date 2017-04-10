@@ -12,4 +12,8 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  submitCompanySearch(company: string) {
+    console.log("hey");
+  }
+
 }
