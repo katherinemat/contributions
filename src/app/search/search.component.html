@@ -5,8 +5,10 @@
   <input class="form-control" #company>
 </div>
 <button (click)="submitCompanySearch(company.value)">Search</button>
-
+<hr>
 <button (click)="getDonations()">Load donations</button>
-<div>
-{{donations}}
+<div *ngFor="let donation of donations">
+{{donation}}
 </div>
+
+<hr>
