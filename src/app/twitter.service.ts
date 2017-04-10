@@ -9,8 +9,10 @@ export class TwitterService {
   ) {}
 
   getUser() {
-    return this.http.get(`https://conduit.productionready.io/api/profiles/eric`)
+    let x = this.http.get(`http://www.opensecrets.org/api/?method=candIndustry&output=json&cid=N00007360&cycle=2016&apikey=6b4ad75be498af7239f6ff551d3d4362`)
     .map((res:Response) => res.json());
+    console.log(x);
+    return x;
   }
 
 }
