@@ -8,8 +8,17 @@ export class CrpService {
     private http: Http
   ) {}
 
-  getUser() {
-    let x = this.http.get(`http://www.opensecrets.org/api/?method=candIndustry&output=json&cid=N00007360&cycle=2016&apikey=6b4ad75be498af7239f6ff551d3d4362`)
+  getOrgIds() {
+    var orgName = "Goldman";
+    let result = this.http.get('https://www.opensecrets.org/api/?method=getOrgs&org=' + orgName +  '&output=json&apikey=6b4ad75be498af7239f6ff551d3d4362')
+    .map((res:Response) => res.json());
+    return result;
+  }
+
+  getOrgContributions(orgId) {
+    // var orgId = 'D000001046';
+
+    let x = this.http.get('https://www.opensecrets.org/api/?method=orgSummary&output=json&id=' + orgId + '&apikey=6b4ad75be498af7239f6ff551d3d4362')
     .map((res:Response) => res.json());
     return x;
   }

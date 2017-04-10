@@ -9,19 +9,28 @@ import { CrpService } from '../crp.service';
 })
 export class SearchComponent {
   constructor(private crpService: CrpService) {}
-    donations = [];
+  donations = [];
+  orgs = [];
 
-    getDonations() {
-      this.crpService.getUser()
-      .subscribe(
-        data => {
-        for (var i = 0; i < data.response.industries.industry.length; i++){
-          this.donations.push(data.response.industries.industry[i]["@attributes"].industry_name)
+  getDonations() {
+    this.crpService.getOrgIds()
+    .subscribe(
+      data => {
+        for (var i = 0; i < data.response.organization.length; i++){
+          this.orgs.push(data.response.organization[i]["@attributes"].orgid)
+          this.crpService.getOrgContributions(data.response.organization[i]["@attributes"].orgid)
+          .subscribe(
+            data => {
+              this.donations.push(data.response.organization["@attributes"].orgname)
+              error => alert(error) }
+            );
+          }
         }
-        // this.donations = JSON.stringify(data.response.industries.industry[2]["@attributes"].industry_name),
-        error => alert(error) }
+        // error => alert(error) }
+
+        // for (var i = 0; i < )
       );
+
+
     }
-
-
-}
+  }
