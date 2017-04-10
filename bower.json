@@ -1,0 +1,14 @@
+{
+  "name": "contributions",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/katherinemat/contributions",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -10,13 +10,14 @@ import { MainComponent } from './main/main.component';
 import { ResultsComponent } from './results/results.component';
 import { TwitterComponent } from './twitter/twitter.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     MainComponent,
     ResultsComponent,
-    TwitterComponent
+    TwitterComponent,
   ],
   imports: [
     BrowserModule,

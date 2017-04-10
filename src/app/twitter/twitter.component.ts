@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TwitterService } from '../twitter.service';
 
 @Component({
   selector: 'app-twitter',
   templateUrl: './twitter.component.html',
-  styleUrls: ['./twitter.component.css']
+  styleUrls: ['./twitter.component.css'],
+  providers: [TwitterService]
 })
-export class TwitterComponent implements OnInit {
+export class TwitterComponent {
+  constructor(private twitterService: TwitterService) {}
+    profile = {};
 
-  constructor() { }
+    loadUser() {
+      this.twitterService.getUser().subscribe(data => this.profile = data);
+    }
 
-  ngOnInit() {
-  }
 
 }
