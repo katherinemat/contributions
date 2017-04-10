@@ -9,8 +9,10 @@ export class TwitterService {
   ) {}
 
   getUser() {
-    return this.http.get(`https://conduit.productionready.io/api/profiles/eric`)
+    let x = this.http.get('https://www.quandl.com/api/v3/datatables/AR/MWCS/metadata.json?api_key=FI0009000681&api_key=g45GkJUq-TBQEwsMQX6r')
     .map((res:Response) => res.json());
+    console.log(x);
+    return x
   }
 
 }
