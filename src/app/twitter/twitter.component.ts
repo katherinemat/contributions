@@ -9,11 +9,14 @@ import { TwitterService } from '../twitter.service';
 })
 export class TwitterComponent {
   constructor(private twitterService: TwitterService) {}
-    profile = {};
+  profile = {};
 
-    loadUser() {
-      this.twitterService.getUser().subscribe(data => this.profile = data);
-    }
+  
+
+  loadUser() {
+    this.twitterService.getUser().subscribe(data => this.profile = data);
+
+  }
 
 
 }

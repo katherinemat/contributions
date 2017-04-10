@@ -10,5 +10,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "ng-twitter-api": "^0.1.5",
+    "ngCordova": "c3634c64090fa11c3e6bab3fcdc29712d3ecb965"
+  }
 }
