@@ -1,4 +1,8 @@
-<div>
-    <button (click)="loadUser()">Load profile</button>
-    {{ profile | json }}
+  <button (click)="loadUser()">Load profile</button>
+  <div>
+  {{profile}}
   </div>
+
+  <!-- <div *ngFor="let contribution of contributions | async">
+  {{contribution.attributes.industry_name}}
+  </div> -->

@@ -5,3 +5,8 @@
   <input class="form-control" #company>
 </div>
 <button (click)="submitCompanySearch(company.value)">Search</button>
+
+<button (click)="getDonations()">Load donations</button>
+<div>
+{{donations}}
+</div>
