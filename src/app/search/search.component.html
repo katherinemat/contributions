@@ -4,17 +4,16 @@
   <br>
   <input class="form-control" #company>
 </div>
-<button (click)="submitCompanySearch(company.value)">Search</button>
 <hr>
-<button (click)="getDonations()">Load donations</button>
+<button (click)="getDonations(company.value)">Load donations</button>
 
 <div *ngFor="let donation of donations">
   {{donation}}
 </div>
 <hr>
 
-<div *ngFor="let org of orgs">
+<!-- <div *ngFor="let org of orgs">
   {{org}}
-</div>
+</div> -->
 
 <hr>

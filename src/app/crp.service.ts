@@ -8,8 +8,7 @@ export class CrpService {
     private http: Http
   ) {}
 
-  getOrgIds() {
-    var orgName = "Goldman";
+  getOrgIds(orgName) {
     let result = this.http.get('https://www.opensecrets.org/api/?method=getOrgs&org=' + orgName +  '&output=json&apikey=6b4ad75be498af7239f6ff551d3d4362')
     .map((res:Response) => res.json());
     return result;

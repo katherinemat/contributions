@@ -12,8 +12,8 @@ export class SearchComponent {
   donations = [];
   orgs = [];
 
-  getDonations() {
-    this.crpService.getOrgIds()
+  getDonations(companyInput) {
+    this.crpService.getOrgIds(companyInput)
     .subscribe(
       data => {
         for (var i = 0; i < data.response.organization.length; i++){
