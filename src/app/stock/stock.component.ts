@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StockService } from '../stock.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { StockService } from '../stock.service';
   styleUrls: ['./stock.component.css'],
   providers: [StockService]
 })
-export class StockComponent {
+export class StockComponent implements OnInit {
 
   constructor(private stockService: StockService) { }
 
@@ -16,17 +16,19 @@ export class StockComponent {
   stockLow = [];
   stockClose = [];
 
-  getCompanyStock() {
-    this.stockService.getStockInfo()
-      .subscribe(
-        data => {
-          this.stockOpen.push(data["Time Series (Daily)"]["2017-04-10"]["1. open"])
-          this.stockHigh.push(data["Time Series (Daily)"]["2017-04-10"]["2. high"])
-          this.stockLow.push(data["Time Series (Daily)"]["2017-04-10"]["3. low"])
-          this.stockClose.push(data["Time Series (Daily)"]["2017-04-10"]["4. close"])
-          error => alert(error)
-        }
-      )
+  ngOnInit() {
+    // getCompanyStock() {
+      this.stockService.getStockInfo()
+        .subscribe(
+          data => {
+            this.stockOpen.push(data["Time Series (Daily)"]["2017-04-10"]["1. open"])
+            this.stockHigh.push(data["Time Series (Daily)"]["2017-04-10"]["2. high"])
+            this.stockLow.push(data["Time Series (Daily)"]["2017-04-10"]["3. low"])
+            this.stockClose.push(data["Time Series (Daily)"]["2017-04-10"]["4. close"])
+            error => alert(error)
+          }
+        )
+    // }
   }
 }
 
