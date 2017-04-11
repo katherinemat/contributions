@@ -4,6 +4,7 @@ import { SearchComponent } from './search/search.component';
 import { MainComponent } from './main/main.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { OrgDetailComponent } from './org-detail/org-detail.component';
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'org/:id',
     component: OrgDetailComponent
+  },
+  {
+    path: 'user',
+    component: UserComponent
   }
 ];
 
