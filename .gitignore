@@ -6,6 +6,7 @@
 
 # dependencies
 /node_modules
+/bower_components
 
 # IDEs and editors
 /.idea
@@ -38,3 +39,6 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+#Firebase credentials
+/src/app/api-keys.ts 
