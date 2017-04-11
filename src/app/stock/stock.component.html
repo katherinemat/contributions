@@ -1,5 +1,6 @@
 <!-- <button (click)="getCompanyStock()">Show stock information</button> -->
 
+
 <div *ngFor="let symbol of orgSymbol">
   Symbol: {{symbol}}
 </div>
@@ -19,3 +20,5 @@
 <p>
   {{company}}
 </p>
+
+<img src="https://chart.finance.yahoo.com/z?s={{orgSymbol[0]}}&t=6m&q=l&l=on&z=s&p=m50,m200"/>

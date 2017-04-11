@@ -10,7 +10,7 @@ export class StockService {
 
   getStockInfo(symbol) {
 
-    let x = this.http.get('http://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&interval=1min&apikey=7717')
+    let x = this.http.get('http://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&interval=1min&apikey=0945')
     .map((res:Response) => res.json());
     // console.log(x);
     return x;

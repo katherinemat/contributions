@@ -48,21 +48,21 @@ export class OrgDetailComponent implements OnInit {
         this.orgId = data.response.organization["@attributes"].orgid;
         this.orgToDisplay = data.response.organization["@attributes"].orgname;
         this.cycle = data.response.organization["@attributes"].cycle;
-        this.gaveTo527 = data.response.organization["@attributes"].gave_to_527;
-        this.gaveToCand = data.response.organization["@attributes"].gave_to_cand;
-        this.gaveToPac = data.response.organization["@attributes"].gave_to_pac;
-        this.gaveToParty = data.response.organization["@attributes"].gave_to_party;
-        this.indivs = data.response.organization["@attributes"].indivs;
-        this.lobbying = data.response.organization["@attributes"].lobbying;
+        this.gaveTo527 = data.response.organization["@attributes"].gave_to_527.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.gaveToCand = data.response.organization["@attributes"].gave_to_cand.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.gaveToPac = data.response.organization["@attributes"].gave_to_pac.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.gaveToParty = data.response.organization["@attributes"].gave_to_party.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.indivs = data.response.organization["@attributes"].indivs.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.lobbying = data.response.organization["@attributes"].lobbying.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         this.membersInvested = data.response.organization["@attributes"].mems_invested;
         this.outside = data.response.organization["@attributes"].outside;
         this.pacs = data.response.organization["@attributes"].pacs;
-        this.republicans = data.response.organization["@attributes"].repubs;
-        this.democrats = data.response.organization["@attributes"].dems;
+        this.republicans = data.response.organization["@attributes"].repubs.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.democrats = data.response.organization["@attributes"].dems.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         this.soft = data.response.organization["@attributes"].soft;
         this.source = data.response.organization["@attributes"].source;
         this.total527 = data.response.organization["@attributes"].tot527;
-        this.total = data.response.organization["@attributes"].total;
+        this.total = data.response.organization["@attributes"].total.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
         error => alert(error) }
       );
