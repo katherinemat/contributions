@@ -23,7 +23,7 @@ export class OrgDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.orgId = urlParameters['id'];
     });
-    this.orgToDisplay = this.crpService.getPlayerById(this.orgId);
+    this.orgToDisplay = this.crpService.getOrgById(this.orgId);
   }
 
 }
