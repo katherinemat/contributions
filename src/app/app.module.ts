@@ -11,6 +11,7 @@ import { ResultsComponent } from './results/results.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { OrgDetailComponent } from './org-detail/org-detail.component';
 import { StockComponent } from './stock/stock.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { StockComponent } from './stock/stock.component';
     TwitterComponent,
     OrgDetailComponent,
     StockComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
