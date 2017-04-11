@@ -3,16 +3,16 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class TwitterService {
+export class StockService {
   constructor (
     private http: Http
   ) {}
 
-  getUser() {
-    let x = this.http.get('https://www.quandl.com/api/v3/datatables/AR/MWCS/metadata.json?api_key=FI0009000681&api_key=g45GkJUq-TBQEwsMQX6r')
+  getStockInfo() {
+    let x = this.http.get('http://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AAPL&interval=1min&apikey=7717')
     .map((res:Response) => res.json());
-    console.log(x);
-    return x
+    // console.log(x);
+    return x;
   }
 
 }
