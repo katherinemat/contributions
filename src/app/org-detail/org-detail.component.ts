@@ -17,13 +17,13 @@ export class OrgDetailComponent implements OnInit {
   orgId: string;
   orgToDisplay;
 
-  constructor(private route: ActivatedRoute, private location: Location, private playerService: PlayerService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private crpService: CrpService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.orgId = urlParameters['id'];
     });
-    this.orgToDisplay = this.crpService.getPlayerById(this.orgId);
+    this.orgToDisplay = this.crpService.getOrgById(this.orgId);
   }
 
 }

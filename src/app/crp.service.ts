@@ -15,11 +15,13 @@ export class CrpService {
   }
 
   getOrgContributions(orgId) {
-    // var orgId = 'D000001046';
-
     let x = this.http.get('https://www.opensecrets.org/api/?method=orgSummary&output=json&id=' + orgId + '&apikey=6b4ad75be498af7239f6ff551d3d4362')
     .map((res:Response) => res.json());
     return x;
+  }
+
+  getOrgById(orgId) {
+    console.log("not done yet");
   }
 
 }
