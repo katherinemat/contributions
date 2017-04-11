@@ -1,0 +1,9 @@
+/*.search-main {
+  font-size: 60px !important;
+}*/
+
+input, label {
+  font-size: 35px;
+  color: white;
+  padding: 6px 0px;
+}
