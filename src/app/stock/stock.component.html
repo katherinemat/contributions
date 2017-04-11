@@ -1,1 +1,14 @@
 <button (click)="getCompanyStock()">Show stock information</button>
+
+<div *ngFor="let open of stockOpen">
+  {{open}}
+</div>
+<div *ngFor="let high of stockHigh">
+  {{high}}
+</div>
+<div *ngFor="let low of stockLow">
+  {{low}}
+</div>
+<div *ngFor="let close of stockClose">
+  {{close}}
+</div>

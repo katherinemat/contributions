@@ -11,11 +11,19 @@ export class StockComponent {
 
   constructor(private stockService: StockService) { }
 
+  stockOpen = [];
+  stockHigh = [];
+  stockLow = [];
+  stockClose = [];
+
   getCompanyStock() {
     this.stockService.getStockInfo()
       .subscribe(
         data => {
-          console.log(data["Time Series (Daily)"]["2016-11-16"]["1. open"])
+          this.stockOpen.push(data["Time Series (Daily)"]["2017-04-10"]["1. open"])
+          this.stockHigh.push(data["Time Series (Daily)"]["2017-04-10"]["2. high"])
+          this.stockLow.push(data["Time Series (Daily)"]["2017-04-10"]["3. low"])
+          this.stockClose.push(data["Time Series (Daily)"]["2017-04-10"]["4. close"])
           error => alert(error)
         }
       )
