@@ -16,8 +16,8 @@ export class StockService {
     return x;
   }
 
-  getOrgSymbol() {
-    let company = "amazon";
+  getOrgSymbol(company) {
+    // let company = "amazon";
     let x = this.http.get('http://stocksearchapi.com/api/?search_text=' + company + '&api_key=60a2b02d5c7236f9450294d21d37c61bdc592e75')
     .map((res:Response) => res.json());
     return x;

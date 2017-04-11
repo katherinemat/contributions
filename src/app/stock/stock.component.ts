@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { StockService } from '../stock.service';
+import { OrgDetailComponent } from '../org-detail/org-detail.component';
 
 @Component({
   selector: 'app-stock',
@@ -8,7 +9,6 @@ import { StockService } from '../stock.service';
   providers: [StockService]
 })
 export class StockComponent implements OnInit {
-
   constructor(private stockService: StockService) { }
 
   stockOpen = [];
@@ -18,8 +18,10 @@ export class StockComponent implements OnInit {
   orgSymbol = [];
   flimm = [];
 
+  @Input() company;
   ngOnInit() {
-    this.stockService.getOrgSymbol()
+    setTimeout(() => {console.log(this.company);
+    this.stockService.getOrgSymbol(this.company)
     .subscribe(
       data => {
         this.orgSymbol.push(data[0].company_symbol);
@@ -36,7 +38,8 @@ export class StockComponent implements OnInit {
         )
       }
     )
-  }
+  }, 300);
+}
 }
 
 
