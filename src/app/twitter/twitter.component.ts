@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 import { TwitterService } from '../twitter.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { TwitterService } from '../twitter.service';
 })
 export class TwitterComponent  implements AfterViewInit {
     constructor() {}
+
+    @Input() company;
 
     ngAfterViewInit () {
             !function(d,s,id){

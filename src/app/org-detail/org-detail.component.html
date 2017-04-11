@@ -38,4 +38,11 @@
 this.outside = data.response.organization["@attributes"].outside;
 this.soft = data.response.organization["@attributes"].soft;
 this.total527 = data.response.organization["@attributes"].tot527; -->
-<app-stock [company]="orgToDisplay">Loading ...</app-stock>
+<div class="row">
+  <div class="col-md-7">
+    <app-stock [company]="orgToDisplay">Loading ...</app-stock>
+  </div>
+  <div class="col-md-5">
+    <app-twitter [company]="orgToDisplay">Loading ...</app-twitter>
+  </div>
+</div>
