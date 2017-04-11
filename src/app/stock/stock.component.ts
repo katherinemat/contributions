@@ -15,10 +15,16 @@ export class StockComponent implements OnInit {
   stockHigh = [];
   stockLow = [];
   stockClose = [];
+  orgSymbol = [];
+  flimm = [];
 
   ngOnInit() {
-    // getCompanyStock() {
-      this.stockService.getStockInfo()
+    this.stockService.getOrgSymbol()
+    .subscribe(
+      data => {
+        this.orgSymbol.push(data[0].company_symbol);
+        console.log(this.orgSymbol[0]);
+        this.stockService.getStockInfo(this.orgSymbol[0])
         .subscribe(
           data => {
             this.stockOpen.push(data["Time Series (Daily)"]["2017-04-10"]["1. open"])
@@ -28,7 +34,8 @@ export class StockComponent implements OnInit {
             error => alert(error)
           }
         )
-    // }
+      }
+    )
   }
 }
 
