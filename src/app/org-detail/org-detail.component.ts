@@ -15,7 +15,7 @@ import { CrpService } from '../crp.service';
 export class OrgDetailComponent implements OnInit {
 
   orgId: string;
-  orgToDisplay;
+  orgToDisplay: string;
 
   constructor(private route: ActivatedRoute, private location: Location, private crpService: CrpService) { }
 
@@ -23,7 +23,15 @@ export class OrgDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.orgId = urlParameters['id'];
     });
-    this.orgToDisplay = this.crpService.getOrgById(this.orgId);
+    // this.orgToDisplay = this.crpService.getOrgById(this.orgId);
+
+    this.crpService.getOrgById(this.orgId)
+    .subscribe(
+      data => {
+        this.orgToDisplay = data
+        console.log(this.orgToDisplay)
+        error => alert(error) }
+      );
   }
 
 }

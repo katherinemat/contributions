@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-xs-6">
-    <h2>{{(orgToDisplay | async)?.name}}</h2>
+    <h2>{{ orgToDisplay | json }}</h2>
   </div>
   <div class="col-xs-6">
-    <h3>{{(orgToDisplay | async)?.id}}</h3>
+    <!-- <h3>{{(orgToDisplay | async)?}}</h3> -->
   </div>
 </div>
