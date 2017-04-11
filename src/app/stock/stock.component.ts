@@ -15,7 +15,7 @@ export class StockComponent {
     this.stockService.getStockInfo()
       .subscribe(
         data => {
-          console.log(data)
+          console.log(data["Time Series (Daily)"]["2016-11-16"]["1. open"])
           error => alert(error)
         }
       )
