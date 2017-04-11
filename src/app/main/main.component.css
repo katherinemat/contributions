@@ -1,5 +1,5 @@
 .main {
-  background-color: teal;
+  background-color: #005959;
   height: 100vh;
 }
 
@@ -20,5 +20,5 @@
   bottom: 30%;
   position: fixed;
   color: white;
-  background-color: red;
+  /*background-color: red;*/
 }
