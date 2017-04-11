@@ -17,7 +17,6 @@
       this.crpService.getOrgIds(companyInput)
       .subscribe(
         data => {
-          console.log(data)
           for (var i = 0; i < data.response.organization.length; i++){
             this.crpService.getOrgById(data.response.organization[i]["@attributes"].orgid)
             .subscribe(
@@ -25,7 +24,6 @@
                 let name = data.response.organization["@attributes"].orgname
                 let id = data.response.organization["@attributes"].orgid
                 let newOrg = new Org(name, id)
-                console.log(newOrg)
                 this.orgs.push(newOrg)
                 error => alert(error) }
               );
