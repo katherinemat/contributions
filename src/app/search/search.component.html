@@ -1,19 +1,14 @@
-<h3>Search by company</h3>
 <div class="form-group">
   <label>Company Name</label>
   <br>
   <input class="form-control" #company>
 </div>
-<hr>
 <button (click)="getDonations(company.value)">Load donations</button>
 
 <div *ngFor="let org of orgs">
   <a (click)="seeOrgDetail(org.id)">{{org.name}}</a>
 </div>
-<hr>
 
 <!-- <div *ngFor="let org of orgs">
   {{org}}
 </div> -->
-
-<hr>
