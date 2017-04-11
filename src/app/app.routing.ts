@@ -19,7 +19,11 @@ const appRoutes: Routes = [
     component: TwitterComponent
   },
   {
+<<<<<<< HEAD
     path: 'org/:id',
+=======
+    path: 'org-detail',
+>>>>>>> ea8815e90b61d536314755d5f00063652075f89c
     component: OrgDetailComponent
   }
 ];

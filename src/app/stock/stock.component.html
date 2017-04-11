@@ -1,0 +1,17 @@
+<!-- <button (click)="getCompanyStock()">Show stock information</button> -->
+
+<div *ngFor="let symbol of orgSymbol">
+  Symbol: {{symbol}}
+</div>
+<div *ngFor="let open of stockOpen">
+  Open: {{open}}
+</div>
+<div *ngFor="let high of stockHigh">
+  High: {{high}}
+</div>
+<div *ngFor="let low of stockLow">
+  Low: {{low}}
+</div>
+<div *ngFor="let close of stockClose">
+  Close: {{close}}
+</div>

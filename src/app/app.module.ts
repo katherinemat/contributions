@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { ResultsComponent } from './results/results.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { OrgDetailComponent } from './org-detail/org-detail.component';
+import { StockComponent } from './stock/stock.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { OrgDetailComponent } from './org-detail/org-detail.component';
     ResultsComponent,
     TwitterComponent,
     OrgDetailComponent,
+    StockComponent,
   ],
   imports: [
     BrowserModule,
