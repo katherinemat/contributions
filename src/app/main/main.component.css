@@ -1,5 +1,5 @@
 .main {
-  background-color: #004040;
+  background-color: #005959;
   height: 100vh;
 }
 
@@ -18,6 +18,7 @@
   bottom: 40%;
   position: absolute;
   color: white;
+
 }
 
 .content {

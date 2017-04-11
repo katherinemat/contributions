@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 import { TwitterService } from '../twitter.service';
 
 @Component({
@@ -7,21 +7,25 @@ import { TwitterService } from '../twitter.service';
   styleUrls: ['./twitter.component.css'],
   providers: [TwitterService]
 })
-export class TwitterComponent {
-  constructor(private twitterService: TwitterService) {}
-    profile = {};
+export class TwitterComponent  implements AfterViewInit {
+    constructor() {}
 
-    loadUser() {
-      this.twitterService.getUser()
-      .subscribe(
-        data => { console.log(data.response.industries.industry[0]),
-        console.log(data.response.industries.industry[0]["@attributes"].industry_name),
-        // data => { this.profile = JSON.stringify(data.response.industries),
-        error => alert(error) }
-      );
+    @Input() company;
+
+    ngAfterViewInit () {
+            !function(d,s,id){
+                var js: any,
+                    fjs=d.getElementsByTagName(s)[0],
+                    p='https';
+                if(!d.getElementById(id)){
+                    js=d.createElement(s);
+                    js.id=id;
+                    js.src=p+"://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js,fjs);
+                }
+            }
+            (document,"script","twitter-wjs");
     }
-
-
 }
 // loadUser() {
 //   this.twitterService.getUser()
