@@ -14,11 +14,15 @@
 
 .main-content {
   z-index: 2;
-  right: 40%;
-  bottom: 30%;
+  right: 60%;
+  bottom: 70%;
   position: fixed;
   color: white;
 
+}
+
+.search {
+  padding-top: 920px;
 }
 
 .content {
@@ -121,7 +125,3 @@
   66.64%,79.3% {transform:translate3d(0,-66%,0);}
   83.3%,95.96% {transform:translate3d(0,-33%,0);}
 }
-
-/*.search {
-  padding-top: 400px;
-}*/

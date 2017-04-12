@@ -23,6 +23,6 @@ input, label {
 }
 
 
-/*.form-control {
-  border-bottom: 1px solid white !important;
-}*/
+.form-control {
+  border-bottom: 2px solid white !important;
+}
