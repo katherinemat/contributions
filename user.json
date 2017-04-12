@@ -6,21 +6,21 @@
 "stocks": [
   {
     "name": "Walt Disney Co",
-    "total": "4242846",
-    "republicans": "250248",
-    "democrats": "1628361",
-    "indivs": "1533259",
-    "pacs": "337450",
+    "total": "4,242,846",
+    "republicans": "250,248",
+    "democrats": "1,628,361",
+    "indivs": "1,533,259",
+    "pacs": "337,450",
     "cycle": "2016",
     "shares": "20"
   },
   {
     "name": "Dr Pepper Snapple Group",
-    "total": "96774",
-    "republicans": "85249",
-    "democrats": "11525",
-    "indivs": "5274",
-    "pacs": "91500",
+    "total": "96,774",
+    "republicans": "85,249",
+    "democrats": "11,525",
+    "indivs": "5,274",
+    "pacs": "91,500",
     "cycle": "2016",
     "shares": 5
   }
