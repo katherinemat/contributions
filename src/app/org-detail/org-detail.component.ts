@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { CrpService } from '../crp.service';
+import { UserService } from '../user.service';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { Stock } from '../stock.model';
+
 
 // import { Player } from '../player.model';
 // import { FirebaseObjectObservable } from 'angularfire2';
@@ -10,7 +14,7 @@ import { CrpService } from '../crp.service';
   selector: 'app-org-detail',
   templateUrl: './org-detail.component.html',
   styleUrls: ['./org-detail.component.css'],
-  providers: [CrpService]
+  providers: [CrpService, UserService]
 })
 export class OrgDetailComponent implements OnInit {
 
@@ -34,7 +38,7 @@ export class OrgDetailComponent implements OnInit {
   total527: string;
   total: string;
 
-  constructor(private route: ActivatedRoute, private location: Location, private crpService: CrpService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private crpService: CrpService, private userService: UserService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -66,6 +70,11 @@ export class OrgDetailComponent implements OnInit {
 
         error => alert(error) }
       );
+  }
+
+  addStock(name: string, total: string, republicans: string, democrats: string, indivs: string, pacs: string, cycle: string) {
+    var newStock: Stock = new Stock(name, total, republicans, democrats, indivs, pacs, cycle);
+    this.userService.addStockToFirebase(newStock);
   }
 
 }

@@ -4,8 +4,10 @@
     <h2>Name: {{ orgToDisplay }}</h2>
     <h2>Total Amount Contributed: ${{ total }}</h2>
     <h3>Cycle: {{ cycle }}</h3>
-    <h3>Name: {{ orgToDisplay }}</h3>
   </div>
+
+  <button (click)="addStock(orgToDisplay, total, republicans, democrats, indivs, pacs, cycle)">Add stock to portfolio</button>
+
 
   <div class="col-xs-6">
 
