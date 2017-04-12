@@ -4,7 +4,7 @@
     <br>
     <input class="form-control" #company>
   </div>
-  <button (click)="getDonations(company.value)">Load donations</button>
+  <button (click)="getDonations(company.value)">Search for matching companie</button>
 
   <div *ngFor="let org of orgs">
     <a (click)="seeOrgDetail(org.id)">{{org.name}}</a>
@@ -15,3 +15,4 @@
   {{org}}
 
 </div>  -->
+<!-- Trigger the modal with a button -->
