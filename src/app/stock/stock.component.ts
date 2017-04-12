@@ -38,7 +38,7 @@ export class StockComponent implements OnInit {
         )
       }
     )
-  }, 1200);
+  }, 2200);
 }
 }
 

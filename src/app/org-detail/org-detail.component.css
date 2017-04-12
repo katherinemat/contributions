@@ -1,0 +1,37 @@
+.all {
+  background-color: #005959;
+}
+
+.title {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-left: 5%;
+}
+
+.title h2 {
+  font-size: 70px;
+  color: white;
+}
+
+#subtitle {
+  font-size: 40px;
+}
+
+.info {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  background:rgba(255,255,255, 0.8);
+  /*box-shadow: 0 0 60px 0 rgba(0, 0, 0, 1);*/
+}
+
+.inform {
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background:rgba(255,255,255, 0.8);
+  /*box-shadow: 0 0 60px 0 rgba(0, 0, 0, 1);*/
+}
