@@ -1,5 +1,5 @@
 .search-main {
-  position: fixed;
+  position: absolute;
   margin-bottom: 0;
   left: 30%;
 }
@@ -25,4 +25,9 @@ input, label {
 
 .form-control {
   border-bottom: 2px solid white !important;
+}
+
+.btn {
+  background-color: #bda033;
+  border-radius: 0%;
 }

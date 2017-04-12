@@ -5,7 +5,7 @@
     <br>
     <input class="form-control" #company>
   </div>
-  <button (click)="getDonations(company.value)">Search for matching companies</button>
+  <button (click)="getDonations(company.value)" class="btn">Search companies</button>
 
   <div class="results">
     <div *ngFor="let org of orgs">
