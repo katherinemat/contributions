@@ -1,24 +1,69 @@
 .main {
   background-color: #005959;
-  height: 100vh;
+  /*background-attachment: scroll;*/
 }
 
-.main img {
-  width: 100%;
-  height: auto;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  opacity: 0.7;
-  position: absolute;
+
+.user {
+  background-color: #005959;
+  text-align: right;
+  padding: 2px;
+  padding-right: 1%;
 }
+
+.userlink {
+  color: white;
+}
+
+.aboutpanel {
+  margin-top: 18%;
+  max-height: 500px;
+}
+
+.block {
+  margin: 2%;
+  color: gray;
+  text-align: center;
+  /*width: 300px;*/
+  background-color: transparent;
+  /*box-shadow: 20px 20px 10px #003434;*/
+  height: 370px;
+}
+
+#leftBlock {
+  margin-left: 4%;
+  background-image: url("http://upload.wikimedia.org/wikipedia/commons/e/ea/NY_stock_exchange_traders_floor_LC-U9-10548-6.jpg");
+  background-size: cover;
+}
+
+#rightBlock {
+  background-image: url("https://c1.staticflickr.com/8/7693/17123251389_bed3c3a1ba_b.jpg");
+  background-size: cover;
+}
+
+#bull {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5%;
+  opacity: 0.7;
+  /*margin-right: 50%;*/
+  /*margin-left: 4%;*/
+  position: absolute;
+  margin: 0;
+}
+
 
 .main-content {
   z-index: 2;
-  right: 40%;
-  bottom: 30%;
-  position: fixed;
+  right: 60%;
+  bottom: 70%;
+  position: absolute;
   color: white;
 
+}
+
+.search {
+  padding-top: 820px;
 }
 
 .content {
@@ -48,7 +93,6 @@
   margin: 0;
 }
 .content__container__list {
-  margin-top: 0;
   padding-left: 340px;
   text-align: left;
   list-style: none;
@@ -65,6 +109,10 @@
 .content__container__list__item {
   line-height:70px;
   margin-left: 10px;
+}
+
+.aboutpanel {
+  height: 900px;
 }
 
 @-webkit-keyframes opacity {
@@ -122,7 +170,3 @@
   66.64%,79.3% {transform:translate3d(0,-66%,0);}
   83.3%,95.96% {transform:translate3d(0,-33%,0);}
 }
-
-/*.search {
-  padding-top: 400px;
-}*/

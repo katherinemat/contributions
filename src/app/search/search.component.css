@@ -1,11 +1,33 @@
 .search-main {
-  position: fixed;
-  margin-bottom: -35%;
-  left: 40%;
+  position: absolute;
+  margin-bottom: 0;
+  left: 30%;
 }
 
 input, label {
   font-size: 35px;
   color: white;
   padding: 6px 0px;
+}
+
+.results {
+  color: black;
+  background-color: white;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 500px;
+  max-height: 150px;
+  overflow-y: scroll;
+  /*margin-left: -100px;*/
+}
+
+
+.form-control {
+  border-bottom: 2px solid white !important;
+}
+
+.btn {
+  background-color: #bda033;
+  border-radius: 0%;
 }
