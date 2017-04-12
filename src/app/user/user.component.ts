@@ -15,12 +15,21 @@ export class UserComponent implements OnInit {
 
   users: FirebaseListObservable<any[]>;
   stocks: FirebaseListObservable<any[]>;
+  stockObjects: Stock[];
 
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
     this.users = this.userService.getUsers();
     this.stocks = this.userService.getStocks();
+  //   this.stocks = this.userService.getStocks().subscribe(dataLastEmittedFromObserver => {
+  //    this.stockToDisplay = dataLastEmittedFromObserver;
+  //    console.log(this.stockToDisplay);
+  //  });
+   this.stocks.subscribe(userStocks => {
+     this.stockObjects = userStocks;
+     console.log(this.stockObjects);
+   });
   }
 
 }

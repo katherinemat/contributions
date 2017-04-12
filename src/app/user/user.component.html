@@ -7,7 +7,7 @@
       <th>Number of Shares</th>
       <th>Contribution breakdown</th>
     </tr>
-    <tr *ngFor="let stock of stocks | async">
+    <tr *ngFor="let stock of stockObjects">
       <td>{{stock.name}}</td>
       <td>{{stock.shares}}</td>
       <td>Total donations: ${{stock.total}}<br>
@@ -19,4 +19,4 @@
 
 </div>
 
-<app-piechart></app-piechart>
+<app-piechart [stockTable]="stockObjects"></app-piechart>

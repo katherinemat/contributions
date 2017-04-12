@@ -1,26 +1,19 @@
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
+<div style="display: block">
+  <canvas baseChart class="chart"
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]='"doughnut"'
+              >
+            </canvas>
+            <!-- (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)" -->
+</div>
 
-  function drawChart() {
-
-    var data = google.visualization.arrayToDataTable([
-      ['Task', 'Hours per Day'],
-      ['Work',     11],
-      ['Eat',      2],
-      ['Commute',  2],
-      ['Watch TV', 2],
-      ['Sleep',    7]
-    ]);
-
-    var options = {
-      title: 'My Daily Activities'
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
-  }
-</script>
-
-<div id="piechart" style="width: 900px; height: 500px;"></div>
+<div *ngFor="let stock of stockTable">
+    <p>
+      {{stock.name}}
+    </p>
+    <p>
+      {{stock.shares}}
+    </p>
+</div>

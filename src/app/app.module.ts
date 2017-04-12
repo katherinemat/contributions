@@ -16,6 +16,8 @@ import { UserComponent } from './user/user.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { PiechartComponent } from './piechart/piechart.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +43,8 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
