@@ -14,17 +14,17 @@
 
 .main-content {
   z-index: 2;
-  right: 35%;
-  bottom: 40%;
-  position: absolute;
+  right: 40%;
+  bottom: 30%;
+  position: fixed;
   color: white;
 
 }
 
 .content {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /*bottom: -50%;
+  left: 90%;*/
   transform: translate(-50%, -50%);
   height: 160px;
   overflow:hidden;
@@ -40,7 +40,6 @@
   overflow: hidden;
   height: 75px;
   padding: 0 70px;
-
 }
 
 .content__container__text {
@@ -50,7 +49,7 @@
 }
 .content__container__list {
   margin-top: 0;
-  padding-left: 320px;
+  padding-left: 340px;
   text-align: left;
   list-style: none;
 
@@ -124,7 +123,6 @@
   83.3%,95.96% {transform:translate3d(0,-33%,0);}
 }
 
-.search {
-  margin-top: 900px;
-
-}
+/*.search {
+  padding-top: 400px;
+}*/

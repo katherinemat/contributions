@@ -1,6 +1,8 @@
-/*.search-main {
-  font-size: 60px !important;
-}*/
+.search-main {
+  position: fixed;
+  margin-bottom: -35%;
+  left: 40%;
+}
 
 input, label {
   font-size: 35px;
