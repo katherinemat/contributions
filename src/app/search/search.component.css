@@ -21,3 +21,8 @@ input, label {
   overflow-y: scroll;
   /*margin-left: -100px;*/
 }
+
+
+/*.form-control {
+  border-bottom: 1px solid white !important;
+}*/
