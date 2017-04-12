@@ -17,6 +17,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { PiechartComponent } from './piechart/piechart.component';
 import { ChartsModule } from 'ng2-charts';
+import { AddStockComponent } from './add-stock/add-stock.component';
 
 
 export const firebaseConfig = {
@@ -37,6 +38,7 @@ export const firebaseConfig = {
     StockComponent,
     UserComponent,
     PiechartComponent,
+    AddStockComponent,
   ],
   imports: [
     BrowserModule,
