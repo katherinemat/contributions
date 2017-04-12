@@ -15,6 +15,44 @@ export class PiechartComponent implements OnInit {
   doughnutChartLabels = [];
   doughnutChartData = [];
 
+
+// #f4e9cd off white
+//
+// #c96c1c orange
+//
+// #e2ad39 yellow
+//
+// #03444a dark teal.
+//
+// #097275 light teal.
+
+
+  lineChartColors:Array<any> = [
+      { // grey
+        backgroundColor: ['#c96c1c', '#e2ad39', '#097275', '#f4e9cd', '#03444a'],
+        borderColor: 'rgba(148,159,177,1)',
+        pointBackgroundColor: 'rgba(148,159,177,1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      },
+      { // dark grey
+        backgroundColor: 'red',
+        borderColor: 'rgba(77,83,96,1)',
+        pointBackgroundColor: 'rgba(77,83,96,1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(77,83,96,1)'
+      },
+      { // grey
+        backgroundColor: 'rgba(148,159,177,0.2)',
+        borderColor: 'rgba(148,159,177,1)',
+        pointBackgroundColor: 'rgba(148,159,177,1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      }
+    ];
   constructor() { }
 
 

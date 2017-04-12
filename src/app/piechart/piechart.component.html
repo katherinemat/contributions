@@ -1,19 +1,21 @@
-<div style="display: block">
+<h4>Graphical representation of the number of shares for each company in the profile</h4>
+<div class="piechart" style="display: block, width: 100%">
   <canvas baseChart class="chart"
               [data]="doughnutChartData"
               [labels]="doughnutChartLabels"
               [chartType]='"doughnut"'
+              [colors]="lineChartColors"
               >
             </canvas>
             <!-- (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)" -->
 </div>
 
-<div *ngFor="let stock of stockTable">
+<!-- <div *ngFor="let stock of stockTable">
     <p>
       {{stock.name}}
     </p>
     <p>
       {{stock.shares}}
     </p>
-</div>
+</div> -->
