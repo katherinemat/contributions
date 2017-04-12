@@ -5,6 +5,7 @@ import { CrpService } from '../crp.service';
 import { UserService } from '../user.service';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { Stock } from '../stock.model';
+import { routing } from '../app.routing';
 
 
 // import { Player } from '../player.model';

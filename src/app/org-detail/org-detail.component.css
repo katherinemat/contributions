@@ -26,6 +26,14 @@ z-index:-1;
   font-size: 40px;
 }
 
+a {
+  color: white;
+  font-size: 20px;
+  float: right;
+  padding-right: 1%;
+  padding-top: 1%;
+}
+
 .info {
   margin-top: 5%;
   margin-bottom: 5%;
