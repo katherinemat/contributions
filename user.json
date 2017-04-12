@@ -1,5 +1,27 @@
-{"users": [{
-  "name": "Rachel",
-  "stocks": []
-  }]
-}
+{"users": [
+  {
+    "name": "Rachel"
+  }
+],
+"stocks": [
+  {
+    "name": "Walt Disney Co",
+    "total": "4,242,846",
+    "republicans": "250,248",
+    "democrats": "1,628,361",
+    "indivs": "1,533,259",
+    "pacs": "337,450",
+    "cycle": "2016",
+    "shares": "20"
+  },
+  {
+    "name": "Dr Pepper Snapple Group",
+    "total": "96,774",
+    "republicans": "85,249",
+    "democrats": "11,525",
+    "indivs": "5,274",
+    "pacs": "91,500",
+    "cycle": "2016",
+    "shares": 5
+  }
+]}

@@ -1,4 +1,22 @@
-<div *ngFor="let user of users | async">
+<div class="container" *ngFor="let user of users | async">
   <h3><em>{{user.name}}</em></h3>
-  <h3>{{user.stocks[0]}}</h3>
+
+  <table style="width:100%">
+    <tr>
+      <th>Company Name</th>
+      <th>Number of Shares</th>
+      <th>Contribution breakdown</th>
+    </tr>
+    <tr *ngFor="let stock of stockObjects">
+      <td>{{stock.name}}</td>
+      <td>{{stock.shares}}</td>
+      <td>Total donations: ${{stock.total}}<br>
+          Republican donations: ${{stock.republicans}}<br>
+          Democrat donations: ${{stock.democrats}}
+      </td>
+    </tr>
+  </table>
+
 </div>
+
+<app-piechart [stockTable]="stockObjects"></app-piechart>
