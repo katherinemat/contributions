@@ -1,14 +1,25 @@
+
 <div class="search-main">
   <div class="form-group">
     <label>Company Name</label>
     <br>
     <input class="form-control" #company>
   </div>
-  <button (click)="getDonations(company.value)">Search for matching companie</button>
+  <button (click)="getDonations(company.value)">Search for matching companies</button>
 
-  <div *ngFor="let org of orgs">
-    <a (click)="seeOrgDetail(org.id)">{{org.name}}</a>
-  </div>
+  <div class="results">
+    <div *ngFor="let org of orgs">
+      <a (click)="seeOrgDetail(org.id)">{{org.name}}</a>
+    <!-- </div>
+    <a>One thing</a><br>
+    <a>One thing</a><br>
+    <a>One thing</a><br>
+    <a>One thing</a><br>
+    <a>One thing</a><br>
+    <a>One thing</a><br>
+    <a>One thing</a><br>
+    <a>One thing</a>
+  </div> -->
 </div>
 
 <!-- <div *ngFor="let org of orgs">

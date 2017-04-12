@@ -1,11 +1,23 @@
 .search-main {
   position: fixed;
-  margin-bottom: -35%;
-  left: 40%;
+  margin-bottom: 0;
+  left: 30%;
 }
 
 input, label {
   font-size: 35px;
   color: white;
   padding: 6px 0px;
+}
+
+.results {
+  color: black;
+  background-color: white;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 500px;
+  max-height: 150px;
+  overflow-y: scroll;
+  /*margin-left: -100px;*/
 }
