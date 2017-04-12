@@ -2,23 +2,28 @@
 
 
 <div *ngFor="let symbol of orgSymbol">
-  Symbol: {{symbol}}
+  <h3>{{company}} ({{symbol}})</h3>
 </div>
-<div *ngFor="let open of stockOpen">
-  Open: {{open}}
-</div>
-<div *ngFor="let high of stockHigh">
-  High: {{high}}
-</div>
-<div *ngFor="let low of stockLow">
-  Low: {{low}}
-</div>
-<div *ngFor="let close of stockClose">
-  Close: {{close}}
+<div class="row">
+  <div class="col-xs-5">
+    <div *ngFor="let open of stockOpen">
+      <h4><strong>Open:</strong> ${{open}}</h4>
+    </div>
+    <div *ngFor="let high of stockHigh">
+      <h4><strong>High:</strong> ${{high}}</h4>
+    </div>
+  </div>
+  <div class="col-xs-5">
+
+    <div *ngFor="let low of stockLow">
+      <h4><strong>Low:</strong> ${{low}}</h4>
+    </div>
+    <div *ngFor="let close of stockClose">
+      <h4><strong>Close:</strong> ${{close}}</h4>
+    </div>
+  </div>
+
 </div>
 
-<p>
-  {{company}}
-</p>
 
 <img src="https://chart.finance.yahoo.com/z?s={{orgSymbol[0]}}&t=6m&q=l&l=on&z=s&p=m50,m200"/>

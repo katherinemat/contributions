@@ -6,37 +6,35 @@
 
   </div>
   <div class="row info">
+    <div class="col-xs-8">
 
 
-      <div class="row">
-        <h3>Fiscal Year: {{ cycle }}</h3>
-        <h3>Contribution breakdown: </h3>
-
-  <button (click)="addStock(orgToDisplay, total, republicans, democrats, indivs, pacs, cycle)">Add stock to portfolio</button>
 
 
-  <div class="col-xs-6">
+        <div class="col-xs-4">
+          <h3>Fiscal Year: {{ cycle }}</h3>
+          <h3>Contribution breakdown: </h3>
+          <button (click)="addStock(orgToDisplay, total, republicans, democrats, indivs, pacs, cycle)" class="btn">Add company to portfolio</button>
+        </div>
 
-
-        <div class="col-xs-6">
+        <div class="col-xs-4">
           <h4>Contributed to Parties: ${{ gaveToParty }}</h4>
           <h4>Republicans: ${{ republicans }}</h4>
           <h4>Democrats: ${{ democrats }}</h4>
-        </div>
-
-        <div class="col-xs-6">
           <h4>Contributed to 527 Committees: ${{ gaveTo527 }}</h4>
           <h4>Contributed to Candidates: ${{ gaveToCand }}</h4>
-          <h4>Contributed to PACs: ${{ gaveToPac }}</h4>
-          <h4>Contributed to Lobbying Groups: ${{ lobbying }}</h4>
         </div>
 
-      </div>
 
+      <div class="col-xs-4">
+        <h4>Contributed to PACs: ${{ gaveToPac }}</h4>
+        <h4>Contributed to Lobbying Groups: ${{ lobbying }}</h4>
       <h4>Contributed from Individuals: ${{ indivs }}</h4>
       <h4>Contributed from PACs: ${{ pacs }}</h4>
       <h4>Source: {{ source }}</h4>
     </div>
+  </div>
+
   </div>
 
   <div class="inform">
