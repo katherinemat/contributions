@@ -4,6 +4,7 @@ import { User } from '../user.model';
 import { Stock } from '../stock.model';
 import { UserService } from '../user.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { PiechartComponent } from '../piechart/piechart.component';
 
 @Component({
   selector: 'app-user',
@@ -30,6 +31,13 @@ export class UserComponent implements OnInit {
      this.stockObjects = userStocks;
      console.log(this.stockObjects);
    });
+  }
+
+  beginDeletingStock(stockToDelete) {
+    if(confirm("Are you sure you want to delete this stock from your profile?")) {
+      this.userService.deleteStock(stockToDelete);
+    }
+    console.log("component " + stockToDelete);
   }
 
 }

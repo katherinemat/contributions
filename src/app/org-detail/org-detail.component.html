@@ -16,7 +16,7 @@
         <div class="col-xs-4">
           <h3>Fiscal Year: {{ cycle }}</h3>
           <h3>Contribution breakdown: </h3>
-          <button (click)="addStock(orgToDisplay, total, republicans, democrats, indivs, pacs, cycle)" class="btn">Add company to portfolio</button>
+          <button routerLink="/user" (click)="addStock(orgToDisplay, total, republicans, democrats, indivs, pacs, cycle)" class="btn">Add company to portfolio</button>
         </div>
 
         <div class="col-xs-4">
