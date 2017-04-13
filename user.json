@@ -25,3 +25,15 @@
     "shares": 5
   }
 ]}
+
+
+
+objectArray: [{"name":
+  "attribute":}]
+
+---Model---
+public objectArray: type[]= [];
+export type(public name, public attribute )
+---Button Click ---\
+newType= new Type{.....}
+myNewTHingy = {/...., objectArray.push(newType)}
