@@ -18,6 +18,7 @@ import { AngularFireModule } from 'angularfire2';
 import { PiechartComponent } from './piechart/piechart.component';
 import { ChartsModule } from 'ng2-charts';
 import { AddStockComponent } from './add-stock/add-stock.component';
+import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 
 export const firebaseConfig = {
@@ -46,7 +47,8 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    ChartsModule
+    ChartsModule,
+    Ng2Bs3ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

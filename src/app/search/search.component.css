@@ -13,13 +13,18 @@ input, label {
 .results {
   color: black;
   background-color: white;
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   padding-left: 10px;
   padding-right: 10px;
   width: 500px;
-  max-height: 150px;
+  max-height: 950px;
   overflow-y: scroll;
   /*margin-left: -100px;*/
+}
+
+.clickable:hover {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 
@@ -30,4 +35,9 @@ input, label {
 .btn {
   background-color: #bda033;
   border-radius: 0%;
+}
+
+.modal {
+  background-color: rgba(255, 0, 0, 0);
+  font-size: 30px;
 }
