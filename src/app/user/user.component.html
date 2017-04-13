@@ -16,7 +16,7 @@
             {{stock.shares}}
           </div>
           <div class="col-xs-6">
-            <app-add-stock [selectedStock]="stock"></app-add-stock>
+            <app-add-stock [stockTable]="stockObjects" [selectedStock]="stock"></app-add-stock>
           </div>
       </td>
       <td>Total donations: ${{stock.total}}<br>

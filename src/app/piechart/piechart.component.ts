@@ -15,18 +15,6 @@ export class PiechartComponent implements OnInit {
   doughnutChartLabels = [];
   doughnutChartData = [];
 
-
-// #f4e9cd off white
-//
-// #c96c1c orange
-//
-// #e2ad39 yellow
-//
-// #03444a dark teal.
-//
-// #097275 light teal.
-
-
   lineChartColors:Array<any> = [
       { // grey
         backgroundColor: ['#c96c1c', '#e2ad39', '#097275', '#f4e9cd', '#03444a'],
@@ -54,6 +42,7 @@ export class PiechartComponent implements OnInit {
       }
     ];
   constructor() { }
+
 
 
   ngOnInit() {

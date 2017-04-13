@@ -4,6 +4,7 @@ import { User } from '../user.model';
 import { Stock } from '../stock.model';
 import { UserService } from '../user.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { PiechartComponent } from '../piechart/piechart.component';
 
 @Component({
   selector: 'app-user',
