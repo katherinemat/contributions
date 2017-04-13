@@ -1,3 +1,7 @@
-.piechart {
-  width: 50%;
+.chart {
+  display: block;
+  width: 100%;
+  responsive: false;
+  margin-bottom: 5%;
+  maintainAspectRatio: false,
 }

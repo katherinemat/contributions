@@ -12,7 +12,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class UserService {
 
-  @Input() stockTable: Stock[];
+  newStockTable: Stock[];
 
   doughnutChartLabels = [];
   doughnutChartData = [];
@@ -82,15 +82,17 @@ export class UserService {
   }
 
   updateStock(localUpdatedStock) {
-    let refreshedStocks: Stock[];
-    for(let stock of this.stocks){
-      this.refreshedStocks.push(stock);
-    }
     var stockEntryinFirebase = this.getStockById(localUpdatedStock.$key);
     stockEntryinFirebase.update({shares: localUpdatedStock.shares});
+
+    this.stocks = this.getStocks();
+    this.stocks.subscribe(userStocks => {
+      this.newStockTable = userStocks;
+    });
     setTimeout(() => {
-      console.log("stocktable: " + this.refreshedStocks);
-      for (let stock of this.refreshedStocks) {
+      console.log(this.newStockTable);
+      for (let stock of this.newStockTable) {
+        console.log(stock)
         this.doughnutChartLabels.push(stock.name);
         this.doughnutChartData.push(stock.shares);
       }

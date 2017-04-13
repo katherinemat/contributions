@@ -23,14 +23,10 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.users = this.userService.getUsers();
     this.stocks = this.userService.getStocks();
-  //   this.stocks = this.userService.getStocks().subscribe(dataLastEmittedFromObserver => {
-  //    this.stockToDisplay = dataLastEmittedFromObserver;
-  //    console.log(this.stockToDisplay);
-  //  });
-   this.stocks.subscribe(userStocks => {
-     this.stockObjects = userStocks;
-     console.log(this.stockObjects);
-   });
+    this.stocks.subscribe(userStocks => {
+      this.stockObjects = userStocks;
+      console.log(this.stockObjects);
+    });
   }
 
   beginDeletingStock(stockToDelete) {

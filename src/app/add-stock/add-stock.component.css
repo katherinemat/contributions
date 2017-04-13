@@ -3,7 +3,10 @@
 }
 
 #shareInput {
-  width: 25px;
+  width: 45px;
   height: 20px;
   border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  padding-right: 2px;
 }

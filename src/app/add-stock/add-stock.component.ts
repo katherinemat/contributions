@@ -19,8 +19,6 @@ export class AddStockComponent implements OnInit {
 
   beginUpdatingStock(stockToUpdate) {
     this.userService.updateStock(stockToUpdate);
-    console.log("we are about to call refreshChart method");
-    // this.userService.refreshChart();
   }
 
 }

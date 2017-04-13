@@ -1,5 +1,5 @@
-<h4>Portfolio shares</h4>
-<div class="piechart" style="display: block, width: 100%">
+<div class="piechart">
+  <div ng-show="chartTabShow">
   <canvas baseChart class="chart"
               [data]="doughnutChartData"
               [labels]="doughnutChartLabels"
@@ -7,15 +7,7 @@
               [colors]="lineChartColors"
               >
             </canvas>
+
             <!-- (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)" -->
 </div>
-
-<!-- <div *ngFor="let stock of stockTable">
-    <p>
-      {{stock.name}}
-    </p>
-    <p>
-      {{stock.shares}}
-    </p>
-</div> -->

@@ -43,15 +43,17 @@ export class PiechartComponent implements OnInit {
     ];
   constructor() { }
 
-
+  buildChart() {
+    for (let stock of this.stockTable) {
+      this.doughnutChartLabels.push(stock.name);
+      this.doughnutChartData.push(stock.shares);
+    }
+  }
 
   ngOnInit() {
 
     setTimeout(() => {
-      for (let stock of this.stockTable) {
-        this.doughnutChartLabels.push(stock.name);
-        this.doughnutChartData.push(stock.shares);
-      }
+      this.buildChart();
     }, 2000);
 
   }

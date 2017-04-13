@@ -1,5 +1,6 @@
+<a routerLink="/">Home</a>
 <div class="container" *ngFor="let user of users | async">
-  <h3><em>{{user.name}}</em></h3>
+  <h2>Your stock portfolio</h2>
 
   <table style="width:100%">
     <tr>
@@ -10,7 +11,7 @@
 
     </tr>
     <tr *ngFor="let stock of stockObjects">
-      <td>{{stock.name}}</td>
+      <td><strong>{{stock.name}}</strong></td>
       <td>
           <div class="col-xs-6">
             {{stock.shares}}
@@ -19,9 +20,9 @@
             <app-add-stock [stockTable]="stockObjects" [selectedStock]="stock"></app-add-stock>
           </div>
       </td>
-      <td>Total donations: ${{stock.total}}<br>
-          Republican donations: ${{stock.republicans}}<br>
-          Democrat donations: ${{stock.democrats}}
+      <td><strong>Total donations:</strong> ${{stock.total}}<br>
+          <strong>Republican donations:</strong> ${{stock.republicans}}<br>
+          <strong>Democrat donations:</strong> ${{stock.democrats}}
       </td>
       <td><button (click)="beginDeletingStock(stock)"><img class="trash-icon" src="http://www.freeiconspng.com/uploads/remove-icon-png-24.png" alt="trash icon" /></button></td>
     </tr>
