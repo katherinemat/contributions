@@ -1,8 +1,8 @@
 
-<div class="search-main">
+<div class="form search-main">
   <div class="form-group">
     <br>
-    <input class="form-control" #company>
+    <input (keyup.enter)="getDonations(company.value)" class="form-control" #company>
   </div>
   <button (click)="getDonations(company.value)" class="btn">Search companies</button>
 
