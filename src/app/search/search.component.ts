@@ -18,6 +18,7 @@ export class SearchComponent {
   modal: ModalComponent;
 
   getDonations(companyInput) {
+    this.orgs = [];
     this.crpService.getOrgIds(companyInput)
     .subscribe(
       data => {
