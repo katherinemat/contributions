@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Stock } from '../stock.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-add-stock',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-stock.component.css']
 })
 export class AddStockComponent implements OnInit {
+  @Input() selectedStock
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+  }
+
+  beginUpdatingStock(stockToUpdate) {
+    this.userService.updateStock(stockToUpdate);
   }
 
 }

@@ -10,7 +10,13 @@ th {
 tr:nth-child(odd) {
   background-color: #f2f2f2
 }
-
+/*
 .col-xs-6 {
   border: 2px solid red;
+}*/
+
+
+.trash-icon {
+  height: 20px;
+  float: left;
 }

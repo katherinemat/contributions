@@ -1,3 +1,8 @@
-<p>
-  add-stock works!
-</p>
+<!-- <div class="row"> -->
+  <div class="col-xs-6">
+      <input id="shareInput" [(ngModel)]="selectedStock.shares" type="number">
+  </div>
+  <div class="col-xs-6">
+    <button (click)="beginUpdatingStock(selectedStock)"><img routerLink="/user" class="edit-icon" src="https://cdn3.iconfinder.com/data/icons/simplius-pack/512/pencil_and_paper-512.png" alt="" /></button>
+  </div>
+<!-- </div> -->

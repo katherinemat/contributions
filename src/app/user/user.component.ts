@@ -32,4 +32,11 @@ export class UserComponent implements OnInit {
    });
   }
 
+  beginDeletingStock(stockToDelete) {
+    if(confirm("Are you sure you want to delete this stock from your profile?")) {
+      this.userService.deleteStock(stockToDelete);
+    }
+    console.log("component " + stockToDelete);
+  }
+
 }

@@ -6,14 +6,24 @@
       <th>Company Name</th>
       <th>Number of Shares</th>
       <th>Contribution breakdown</th>
+      <th></th>
+
     </tr>
     <tr *ngFor="let stock of stockObjects">
       <td>{{stock.name}}</td>
-      <td>{{stock.shares}}</td>
+      <td>
+          <div class="col-xs-6">
+            {{stock.shares}}
+          </div>
+          <div class="col-xs-6">
+            <app-add-stock [selectedStock]="stock"></app-add-stock>
+          </div>
+      </td>
       <td>Total donations: ${{stock.total}}<br>
           Republican donations: ${{stock.republicans}}<br>
           Democrat donations: ${{stock.democrats}}
       </td>
+      <td><button (click)="beginDeletingStock(stock)"><img class="trash-icon" src="http://www.freeiconspng.com/uploads/remove-icon-png-24.png" alt="trash icon" /></button></td>
     </tr>
   </table>
 
